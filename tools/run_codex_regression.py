@@ -16,6 +16,7 @@ import os
 import shutil
 import subprocess
 import tempfile
+from collections.abc import Callable
 from pathlib import Path
 
 
@@ -27,17 +28,22 @@ ACTIVATION_PROMPT = (
 )
 
 
-def codex_command() -> list[str]:
+def codex_command(
+    *,
+    platform_name: str | None = None,
+    which: Callable[[str], str | None] = shutil.which,
+) -> list[str]:
     """Return an argv prefix that never relies on shell parsing."""
-    if os.name != "nt":
-        resolved = shutil.which("codex")
+    platform_name = os.name if platform_name is None else platform_name
+    if platform_name != "nt":
+        resolved = which("codex")
         if resolved:
             return [resolved]
         raise RuntimeError("Codex CLI was not found on PATH")
 
-    npm_shim = shutil.which("codex.cmd")
+    npm_shim = which("codex.cmd")
     if npm_shim:
-        node = shutil.which("node.exe") or shutil.which("node")
+        node = which("node.exe") or which("node")
         codex_js = Path(npm_shim).resolve().parent / "node_modules" / "@openai" / "codex" / "bin" / "codex.js"
         if not node:
             raise RuntimeError("Codex npm shim was found, but Node.js was not found on PATH")
@@ -45,7 +51,7 @@ def codex_command() -> list[str]:
             raise RuntimeError(f"Codex npm launcher was not found beside the shim: {codex_js}")
         return [node, str(codex_js)]
 
-    standalone = shutil.which("codex.exe")
+    standalone = which("codex.exe")
     if standalone:
         return [standalone]
     raise RuntimeError("Codex CLI was not found on PATH")

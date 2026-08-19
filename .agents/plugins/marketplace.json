@@ -1,0 +1,20 @@
+{
+  "name": "premilume-marketplace",
+  "interface": {
+    "displayName": "Premilume"
+  },
+  "plugins": [
+    {
+      "name": "premilume",
+      "source": {
+        "source": "local",
+        "path": "./plugins/premilume"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education & Research"
+    }
+  ]
+}

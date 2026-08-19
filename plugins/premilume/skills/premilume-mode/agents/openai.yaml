@@ -1,0 +1,10 @@
+interface:
+  display_name: "Premilume Mode"
+  short_description: "Balances direct answers with guided exploration"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#4F6D7A"
+  default_prompt: "Use $premilume-mode to turn mentor mode on for this conversation."
+
+policy:
+  allow_implicit_invocation: true

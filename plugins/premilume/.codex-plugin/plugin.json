@@ -1,0 +1,43 @@
+{
+  "name": "premilume",
+  "version": "0.1.0",
+  "description": "A user-controlled, skills-only workflow that balances direct answers with guided exploration.",
+  "author": {
+    "name": "battle-doll",
+    "url": "https://github.com/battle-doll"
+  },
+  "homepage": "https://github.com/battle-doll/premilume",
+  "repository": "https://github.com/battle-doll/premilume",
+  "license": "MIT",
+  "keywords": [
+    "mentoring",
+    "decision-support",
+    "learning",
+    "ai-literacy"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Premilume",
+    "shortDescription": "Balanced answers and guidance",
+    "longDescription": "A user-controlled workflow that selects direct answers, guided exploration, or a concise blend based on the user's goal, urgency, learning intent, uncertainty, risk, and reversibility. It supports per-request overrides, keeps important assumptions and value choices visible, and adds no external server, account, long-term memory, or telemetry. Its roles are response strategies, not separate agents or professionals.",
+    "developerName": "battle-doll",
+    "category": "Education & Research",
+    "capabilities": [
+      "Direct-answer routing",
+      "Guided exploration",
+      "Assumption and counterargument checks",
+      "Bounded knowledge-frontier mapping"
+    ],
+    "websiteURL": "https://github.com/battle-doll/premilume",
+    "privacyPolicyURL": "https://github.com/battle-doll/premilume/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/battle-doll/premilume/blob/main/TERMS.md",
+    "defaultPrompt": [
+      "$premilume-mode 멘토 모드를 켜고 이 설계의 전제와 가장 작은 검증 실험을 함께 찾아줘.",
+      "$premilume-mode Turn mentor mode on and help me solve this while preserving the key reasoning.",
+      "$premilume-mode 멘토 모드를 켜고 이번 요청은 직접 답변으로 처리해줘."
+    ],
+    "brandColor": "#4F6D7A",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

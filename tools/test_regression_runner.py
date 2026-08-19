@@ -23,10 +23,10 @@ class RegressionRunnerTests(unittest.TestCase):
             def fake_which(name: str) -> str | None:
                 return {"codex.cmd": str(shim), "node.exe": "C:\\Node\\node.exe"}.get(name)
 
-            with mock.patch.object(runner.os, "name", "nt"), mock.patch.object(
-                runner.shutil, "which", side_effect=fake_which
-            ):
-                self.assertEqual(runner.codex_command(), ["C:\\Node\\node.exe", str(launcher)])
+            self.assertEqual(
+                runner.codex_command(platform_name="nt", which=fake_which),
+                ["C:\\Node\\node.exe", str(launcher)],
+            )
 
     def test_prompt_metacharacters_remain_one_argv_item(self) -> None:
         prompt = "keep & | < > ^ % as literal text"
@@ -44,11 +44,8 @@ class RegressionRunnerTests(unittest.TestCase):
             def fake_which(name: str) -> str | None:
                 return str(shim) if name == "codex.cmd" else None
 
-            with mock.patch.object(runner.os, "name", "nt"), mock.patch.object(
-                runner.shutil, "which", side_effect=fake_which
-            ):
-                with self.assertRaisesRegex(RuntimeError, "Node.js was not found"):
-                    runner.codex_command()
+            with self.assertRaisesRegex(RuntimeError, "Node.js was not found"):
+                runner.codex_command(platform_name="nt", which=fake_which)
 
     def test_portal_cases_are_normalized_without_changing_prompts(self) -> None:
         payload = {

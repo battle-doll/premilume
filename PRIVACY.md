@@ -2,7 +2,7 @@
 
 [English](PRIVACY.md) · [한국어](docs/ko/PRIVACY.md) · [日本語](docs/ja/PRIVACY.md) · [简体中文](docs/zh-CN/PRIVACY.md) · [Русский](docs/ru/PRIVACY.md)
 
-Last updated: 2026-08-19
+Last updated: 2026-08-20
 
 ## Scope
 
@@ -26,9 +26,13 @@ If a user asks the host to use files, web search, connectors, shell commands, or
 
 Information a person voluntarily posts to a GitHub issue, discussion, pull request, security advisory, or other repository channel is provided to GitHub and the repository maintainers outside the plugin's runtime. Public posts may be indexed, copied, forked, or retained in Git history.
 
+The categories of data that may be processed in those channels are the submitter's GitHub account identifier and public profile information; the issue, discussion, pull-request, or advisory text and any attachments the submitter chooses to provide; and technical reproduction metadata voluntarily provided, such as plugin and host versions, language, operating environment, expected and observed behavior, and minimal reproduction steps. Do not include secrets or unrelated personal data.
+
+The purposes are to provide support, reproduce and triage bugs, respond to security or privacy incidents, and maintain and secure the project. GitHub processes this information as the platform provider, and repository maintainers access it only as needed for those purposes.
+
 The maintainers do not copy support submissions into a separate customer database or CRM. Repository submissions remain subject to GitHub's retention controls and may remain until the author or a maintainer removes them; no fixed deletion period or complete removal from Git history, forks, caches, or third-party copies is promised.
 
-Do not post private conversations, credentials, customer data, security exploit details, or other sensitive information. After publication, use GitHub private vulnerability reporting for a confidential security or privacy incident. Enabling that channel is a release gate. If it is not available, do not send the sensitive details; open only a minimal public issue asking the maintainer to enable a private channel. For removal of information posted to a project channel, contact the maintainers through the same repository and identify the exact content.
+Do not post private conversations, credentials, customer data, security exploit details, or other sensitive information. GitHub private vulnerability reporting is currently enabled for this public repository; use it for a confidential security or privacy incident. If it later becomes unavailable, do not send the sensitive details; open only a minimal public issue asking the maintainer to restore a private channel. For removal of information posted to a project channel, contact the maintainers through the same repository and identify the exact content.
 
 ## Children and high-impact data
 

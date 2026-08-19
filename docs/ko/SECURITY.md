@@ -18,7 +18,7 @@
 
 ## 취약점 신고
 
-GitHub 비공개 취약점 신고가 활성화될 때까지 공개 출시는 차단됩니다. 공개 후에는 다음 경로를 이용하세요.
+GitHub 비공개 취약점 신고가 활성화되어 있습니다. 다음 경로를 이용하세요.
 
 <https://github.com/battle-doll/premilume/security/advisories/new>
 

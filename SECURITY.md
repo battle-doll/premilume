@@ -16,7 +16,7 @@ The supplied SVG files contain no script, event handler, external reference, or 
 
 ## Reporting a vulnerability
 
-Public release is blocked until GitHub private vulnerability reporting is enabled. After publication, use:
+GitHub private vulnerability reporting is enabled. Use:
 
 <https://github.com/battle-doll/premilume/security/advisories/new>
 

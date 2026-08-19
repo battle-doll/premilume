@@ -15,9 +15,13 @@ All notable changes to this project will be documented here.
 - Bounded knowledge-frontier navigation.
 - Prompt-injection, permission, high-impact, privacy, and anti-dependency boundaries.
 - English, Korean, Japanese, Simplified Chinese, and Russian reader documentation; synthetic evals; static validation; and submission-preparation materials.
-- Explicit OFF-state early return and a private-reporting release gate.
+- Explicit OFF-state early return and a private vulnerability reporting channel.
+
+### Release status
+
+- Version 0.1.0 was released publicly on GitHub on 2026-08-19 with live policy and support URLs and private vulnerability reporting enabled.
+- An OpenAI portal draft exists and passed the skills-only package scan. A fresh-conversation ChatGPT test, review submission, approval, and directory publication remain outstanding.
 
 ### Known limitations
 
 - Mode state is instruction-based and best effort after host context compaction.
-- Public naming, verified publisher identity, live URLs, cross-host validation, release, and directory submission are not complete.

@@ -18,7 +18,7 @@
 
 ## 报告漏洞
 
-在启用 GitHub 私密漏洞报告之前，不得公开发布。公开发布后，请使用：
+GitHub 私密漏洞报告已启用。请使用：
 
 <https://github.com/battle-doll/premilume/security/advisories/new>
 

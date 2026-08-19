@@ -18,7 +18,7 @@
 
 ## 脆弱性の報告
 
-GitHub の非公開脆弱性報告が有効になるまで、公開リリースは行えません。公開後は次の経路を利用してください。
+GitHub の非公開脆弱性報告は有効です。次の経路を利用してください。
 
 <https://github.com/battle-doll/premilume/security/advisories/new>
 

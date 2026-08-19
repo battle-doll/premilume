@@ -20,7 +20,8 @@ All notable changes to this project will be documented here.
 ### Release status
 
 - Version 0.1.0 was released publicly on GitHub on 2026-08-19 with live policy and support URLs and private vulnerability reporting enabled.
-- An OpenAI portal draft exists and passed the skills-only package scan. A fresh-conversation ChatGPT test, review submission, approval, and directory publication remain outstanding.
+- An OpenAI portal draft exists and its skills-only bundle scan passed; the complete final package also passed Codex validation.
+- On 2026-08-20, a private ChatGPT Work release-candidate skill passed fresh-conversation host-behavior smoke checks on exact final instruction content. Its downloaded instruction body and three reference texts matched the final source, but its private name, description, and inlined packaging differed, so it was not a byte-identical complete-plugin test. Review submission, approval, and directory publication remain outstanding, and the published plugin requires a post-publication smoke after directory availability.
 
 ### Known limitations
 

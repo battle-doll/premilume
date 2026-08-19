@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Premilume skill icon</title>
+  <desc id="desc">Two balanced paths joining into one upward path</desc>
+  <rect width="512" height="512" rx="112" fill="#F4F7F5"/>
+  <path d="M132 150c0 86 40 126 124 150" fill="none" stroke="#2F4858" stroke-width="34" stroke-linecap="round"/>
+  <path d="M380 150c0 86-40 126-124 150" fill="none" stroke="#79A7A0" stroke-width="34" stroke-linecap="round"/>
+  <path d="M256 300v92" fill="none" stroke="#4F6D7A" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="132" cy="132" r="30" fill="#2F4858"/>
+  <circle cx="380" cy="132" r="30" fill="#79A7A0"/>
+  <path d="m226 376 30 32 30-32" fill="none" stroke="#4F6D7A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

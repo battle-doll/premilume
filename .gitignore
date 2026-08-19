@@ -1,0 +1,22 @@
+# Local working material; not part of the public plugin.
+.playwright-mcp/
+PLUGIN_HANDOFF.md
+PLUGIN_CHAT_PROMPT.md
+
+# Secrets and local configuration.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs, caches, environments, and generated packages.
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+*.zip
+
+# Never commit real conversation transcripts.
+evals/transcripts/

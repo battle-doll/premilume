@@ -23,7 +23,8 @@ Items marked **blocking** must be completed by the accountable publisher before 
 
 - [x] **Blocking:** install the final package through the marketplace in a clean Codex environment.
 - [x] **Blocking:** test the final package in a new Codex conversation.
-- [ ] **Blocking:** test the final package in a new ChatGPT conversation.
+- [x] **Blocking:** run fresh-conversation ChatGPT Work host-behavior smoke checks on exact final instruction content through the private `premilume-rc-test` skill. Its downloaded `SKILL.md` instruction body contained the exact final source body and all three reference texts exactly matched final source; its private name, description, and inlined packaging differed, so this was not a byte-identical complete-plugin test.
+- [ ] **Post-publication:** after directory availability, run a fresh-conversation smoke on the published plugin.
 - [x] Test Korean and English activation, repeated ON/OFF, new-conversation default OFF, direct answer, hints, urgent recovery, consequential design, one-request override, and context uncertainty.
 - [x] Test quoted, translated, summarized, fictional, attached, web, and tool-output activation phrases as negative cases.
 - [x] Test prompt injection, secret access, destructive action, external posting, high-impact advice, dependency cues, and false memory claims.
@@ -45,7 +46,7 @@ Items marked **blocking** must be completed by the accountable publisher before 
 - [x] Publisher identity verified in OpenAI Platform (read-only check on 2026-08-19).
 - [x] Apps Management write access confirmed by the enabled **Create plugin** control and existing published versions in the same organization (read-only check on 2026-08-19).
 - [x] Create the private Premilume 0.1.0 draft using the skills-only submission type.
-- [x] Upload the final skills-only bundle and obtain a **Passed** scan for `premilume-mode`.
+- [x] Upload a skills-only bundle and obtain a **Passed** scan for `premilume-mode`.
 - [x] Populate Plugin Info, three starter prompts, production icons, and public URLs.
 - [ ] Confirm that the private draft has the intended verified `battle-doll` Developer Identity selected.
 - [ ] Enter and verify the five positive and three negative cases from `evals/submission-cases.json` in the portal. Their final Codex execution has already passed.

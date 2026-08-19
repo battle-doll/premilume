@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md)
 
-> Release status: Premilume v0.1.0 was released publicly on GitHub on August 19, 2026. An OpenAI portal draft exists and its skills-only package scan passed. It has not been submitted for review, approved, or published in the directory. A fresh-conversation ChatGPT test is still pending.
+> Release status: Premilume v0.1.0 was released publicly on GitHub on August 19, 2026. An OpenAI portal draft exists and its skills-only bundle scan passed. Codex complete-package validation passed, and a private ChatGPT Work fresh-conversation host-behavior smoke passed on exact final instruction content. It has not been submitted for review, approved, or published in the directory.
 
 Premilume is a user-controlled response workflow that gives direct answers when speed matters and guided exploration when judgment, learning, or hidden assumptions matter more.
 
@@ -129,13 +129,15 @@ python tools/validate_package.py
 
 Maintainers should also run the current bundled Codex validators for the plugin and skill, install the final package through the local marketplace, and execute the synthetic cases in [evals](evals/README.md) in both Korean and English.
 
+On August 20, 2026, a private ChatGPT Work release-candidate skill named `premilume-rc-test` passed fresh-conversation host-behavior smoke checks on the exact final instruction content. Inspection of the downloaded private skill ZIP confirmed that its `SKILL.md` instruction body contained the exact final source body and that all three reference texts exactly matched the final source references. Its private name, description, and inlined packaging differed from the final plugin, so this is not a claim of byte-identical complete-plugin validation. After directory availability, maintainers should run a post-publication fresh-conversation smoke on the published plugin. See [the local validation record](evals/LOCAL_RESULTS.md).
+
 ## Known limitations and remaining OpenAI publication conditions
 
 - ON/OFF state is instruction-based and conversation-scoped, not a durable state machine.
 - Model responses remain probabilistic; semantic eval cases require human review.
 - This workflow can support verification but cannot guarantee correctness, learning, safety, or better judgment.
 - It is not a medical, legal, financial, mental-health, or other licensed professional service.
-- The public policy and support URLs are live. Final legal clearance of the product name, a fresh-conversation ChatGPT test, OpenAI review and approval, and directory publication remain outstanding.
+- The public policy and support URLs are live, and ChatGPT host behavior has been smoke-tested on exact final instruction content. Final legal clearance of the product name, OpenAI review and approval, and directory publication remain outstanding; after directory availability, a published-plugin post-publication smoke remains to be run.
 
 ## Project origin and license
 

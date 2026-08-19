@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md)
 
-> Release status: Premilume v0.1.0 is the initial public skills-only release. The source and policy documents are published on GitHub; the plugin has not yet been submitted to OpenAI review or published in the directory.
+> Release status: Premilume v0.1.0 was released publicly on GitHub on August 19, 2026. An OpenAI portal draft exists and its skills-only package scan passed. It has not been submitted for review, approved, or published in the directory. A fresh-conversation ChatGPT test is still pending.
 
 Premilume is a user-controlled response workflow that gives direct answers when speed matters and guided exploration when judgment, learning, or hidden assumptions matter more.
 
@@ -129,13 +129,13 @@ python tools/validate_package.py
 
 Maintainers should also run the current bundled Codex validators for the plugin and skill, install the final package through the local marketplace, and execute the synthetic cases in [evals](evals/README.md) in both Korean and English.
 
-## Known limitations
+## Known limitations and remaining OpenAI publication conditions
 
 - ON/OFF state is instruction-based and conversation-scoped, not a durable state machine.
 - Model responses remain probabilistic; semantic eval cases require human review.
 - This workflow can support verification but cannot guarantee correctness, learning, safety, or better judgment.
 - It is not a medical, legal, financial, mental-health, or other licensed professional service.
-- Full legal name clearance, live policy URLs, ChatGPT host behavior, and directory review remain release gates.
+- The public policy and support URLs are live. Final legal clearance of the product name, a fresh-conversation ChatGPT test, OpenAI review and approval, and directory publication remain outstanding.
 
 ## Project origin and license
 

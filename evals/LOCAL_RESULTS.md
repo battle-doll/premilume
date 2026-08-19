@@ -60,9 +60,11 @@ The first post-edit run exposed a legacy local installation and an ambiguous cac
 
 Raw model responses were kept only in temporary local files for review and are not part of the repository or release package.
 
-## Publisher account readiness
+## Publisher account and portal readiness
 
-Read-only OpenAI Platform checks on 2026-08-19 showed `Verified` for the current publisher organization, an enabled **Create plugin** control in the plugin portal, and existing published plugins whose displayed developer name is `battle-doll`. This is evidence that publisher verification and Apps Management write access are available in the current organization. No new draft was created, no file was uploaded, and no attestation, submission, approval, or publication action was performed.
+OpenAI Platform checks on 2026-08-19 showed `Verified` for the current publisher organization, an enabled **Create plugin** control in the plugin portal, and existing published plugins whose displayed developer name is `battle-doll`. This is evidence that publisher verification and Apps Management write access are available in the current organization. A private Premilume 0.1.0 skills-only draft now exists. A skills-only bundle was uploaded, the `premilume-mode` scan passed, and Plugin Info, three starter prompts, icons, and public URLs are populated. Actual selection of the verified Developer Identity, country availability, and entry of all five positive and three negative portal cases have not yet been confirmed. The four policy attestations are unchecked, **Confirm and submit** is disabled, and no review submission, approval, or directory publication has occurred.
+
+The GitHub repository and v0.1.0 release are public. Website, support, privacy, and terms URLs returned HTTP 200; GitHub private vulnerability reporting is enabled; and the published release ZIP matches the canonical SHA-256 recorded above.
 
 ## Environment notes
 
@@ -72,8 +74,9 @@ The CLI emitted unrelated host warnings about several already-configured connect
 
 - ChatGPT web, desktop Chat, and Work surfaces;
 - repeated behavior across models and context compaction;
-- public HTTPS policy URLs, portal upload and scan, and selection of the same verified Developer Identity in the new draft;
+- a fresh ChatGPT-conversation test using the final package;
+- actual selection of the verified Developer Identity, entry of all five positive and three negative portal cases, and country availability;
 - full trademark clearance beyond the documented preliminary knockout;
-- OpenAI portal validation, review, approval, and publication.
+- personal confirmation of all four policy attestations, OpenAI review submission, approval, and publication.
 
-These remain public-release gates. The smoke results support local development readiness, not a claim that the plugin is publicly released or universally reliable.
+These remain OpenAI review-submission and directory-publication gates. The smoke results support local development readiness, not evidence of OpenAI review, approval, directory publication, or universal reliability.

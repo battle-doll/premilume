@@ -8,7 +8,7 @@ Confirm the plugin version, host (ChatGPT or Codex), operating environment, whet
 
 ## Public support
 
-After the repository is published, use GitHub Issues at:
+Use GitHub Issues at:
 
 <https://github.com/battle-doll/premilume/issues>
 
@@ -24,7 +24,7 @@ Do not include credentials, private conversations, customer or employer data, pe
 
 ## Security reports
 
-Do not open a public issue for a vulnerability or privacy incident that could expose data or enable harmful actions. Follow [SECURITY.md](SECURITY.md) and use private vulnerability reporting once it is enabled on the public repository. Public release is blocked until that private channel is enabled. If it is unavailable, send no sensitive details; open only a minimal issue asking the maintainer to enable a private channel.
+Do not open a public issue for a vulnerability or privacy incident that could expose data or enable harmful actions. Follow [SECURITY.md](SECURITY.md) and use the private vulnerability reporting channel enabled for the public repository. If that channel becomes unavailable, send no sensitive details; open only a minimal issue asking the maintainer to restore a private channel.
 
 ## Support scope
 

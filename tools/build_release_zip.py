@@ -26,7 +26,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=Path,
-        default=REPO_ROOT / "dist" / "premilume-0.1.0.zip",
+        default=REPO_ROOT / "dist" / "premilume-0.1.1.zip",
         help="Destination ZIP path",
     )
     return parser.parse_args()

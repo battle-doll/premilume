@@ -4,7 +4,7 @@
 
 ## Supported versions
 
-Security fixes are provided for the latest published minor release. Version 0.1.0 is the current supported public release.
+Security fixes are provided for the latest published minor release. Version 0.1.0 is the current supported published release; version 0.1.1 is an unsubmitted update candidate.
 
 ## Design boundary
 

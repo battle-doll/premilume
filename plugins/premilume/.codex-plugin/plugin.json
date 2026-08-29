@@ -1,7 +1,7 @@
 {
   "name": "premilume",
-  "version": "0.1.0",
-  "description": "A user-controlled, skills-only workflow that balances direct answers with guided exploration.",
+  "version": "0.1.1",
+  "description": "An explicit opt-in mentor mode for direct answers, hints-first learning, assumption checks, and counterarguments.",
   "author": {
     "name": "battle-doll",
     "url": "https://github.com/battle-doll"
@@ -10,16 +10,16 @@
   "repository": "https://github.com/battle-doll/premilume",
   "license": "MIT",
   "keywords": [
-    "mentoring",
+    "mentor-mode",
     "decision-support",
-    "learning",
-    "ai-literacy"
+    "guided-learning",
+    "critical-thinking"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Premilume",
-    "shortDescription": "Balanced answers and guidance",
-    "longDescription": "A user-controlled workflow that selects direct answers, guided exploration, or a concise blend based on the user's goal, urgency, learning intent, uncertainty, risk, and reversibility. It supports per-request overrides, keeps important assumptions and value choices visible, and adds no external server, account, long-term memory, or telemetry. Its roles are response strategies, not separate agents or professionals.",
+    "shortDescription": "Explicit opt-in mentor mode",
+    "longDescription": "Use Premilume only when the user explicitly turns on mentor mode or continues a clearly active mentor-mode conversation. It can give the answer first, offer one hint at a time, challenge assumptions, or present a counterargument while keeping the user's goal and urgency in control. Ordinary advice, learning, critique, and brainstorming requests do not activate it. The skills-only package adds no external server, account, long-term memory, telemetry, network access, or permissions.",
     "developerName": "battle-doll",
     "category": "Education & Research",
     "capabilities": [
@@ -32,9 +32,9 @@
     "privacyPolicyURL": "https://github.com/battle-doll/premilume/blob/main/PRIVACY.md",
     "termsOfServiceURL": "https://github.com/battle-doll/premilume/blob/main/TERMS.md",
     "defaultPrompt": [
-      "$premilume-mode 멘토 모드를 켜고 이 설계의 전제와 가장 작은 검증 실험을 함께 찾아줘.",
-      "$premilume-mode Turn mentor mode on and help me solve this while preserving the key reasoning.",
-      "$premilume-mode 멘토 모드를 켜고 이번 요청은 직접 답변으로 처리해줘."
+      "멘토 모드 켜줘. 이 설계의 전제와 가장 작은 검증 실험을 함께 찾아줘.",
+      "Turn mentor mode on and help me solve this while preserving the key reasoning.",
+      "멘토 모드 켜줘. 이번 요청은 답만 먼저 주고 필요한 검증만 덧붙여줘."
     ],
     "brandColor": "#4F6D7A",
     "composerIcon": "./assets/icon.svg",

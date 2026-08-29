@@ -729,7 +729,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Package validation passed: premilume 0.1.0")
+    print("Package validation passed: premilume 0.1.1")
     return 0
 
 

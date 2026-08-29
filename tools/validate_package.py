@@ -528,6 +528,7 @@ def validate_evals(errors: list[str]) -> None:
 
 def validate_discovery_evals(payload: object, errors: list[str]) -> None:
     if not isinstance(payload, dict):
+        errors.append("discovery eval payload must be an object")
         return
     if payload.get("plugin") != "premilume" or payload.get("synthetic_only") is not True:
         errors.append("discovery eval metadata must identify premilume and synthetic-only data")

@@ -2,9 +2,29 @@
 
 [English](README.md) | [한국어](README.ko.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Русский](README.ru.md)
 
-> Release status: Premilume v0.1.0 was released publicly on GitHub on August 19, 2026. An OpenAI portal draft exists and its skills-only bundle scan passed. Codex complete-package validation passed, and a private ChatGPT Work fresh-conversation host-behavior smoke passed on exact final instruction content. It has not been submitted for review, approved, or published in the directory.
+Choose direct answers or guided AI mentoring while keeping assumptions, trade-offs, and user control visible. Premilume is for developers, learners, and decision-makers who want a mentor mode on demand—not an always-on tutor.
 
-Premilume is a user-controlled response workflow that gives direct answers when speed matters and guided exploration when judgment, learning, or hidden assumptions matter more.
+> Publication status, verified 2026-08-29: [v0.1.0 is Published](https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825) in OpenAI Platform and the remote catalog records `GLOBAL` / `AVAILABLE` with discoverability `UNLISTED`. The first publication date is unknown. v0.1.1 is an unsubmitted update candidate; no LISTED status is claimed.
+
+## Install or use
+
+- Open the exact [published v0.1.0 plugin page](https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825). Because it is `UNLISTED`, do not expect directory search or browse placement.
+- For local Codex development, use the [source installation steps](#local-installation) below.
+- This branch prepares v0.1.1 for a future update submission; it is not the published package.
+
+## Try it
+
+```text
+Turn mentor mode on and help me solve this while preserving the key reasoning.
+멘토 모드 켜줘. 이번 요청은 답만 먼저 주고 필요한 검증만 덧붙여줘.
+```
+
+## Key boundaries
+
+- Manual only: every new conversation starts OFF. The current user must explicitly activate it; knowing the product name is unnecessary.
+- Ordinary advice, learning, brainstorming, critique, counterargument, or assumption-check requests do not activate it while OFF.
+- Delegation, parallelization, orchestration scope, and orchestration profiles are outside this plugin.
+- It adds no server, account, network access, persistent memory, telemetry, or permissions.
 
 It is an independent open-source project. It is not created, operated, sponsored, approved, or endorsed by OpenAI.
 
@@ -91,7 +111,7 @@ It then limits exploration to one to three high-impact unknowns and turns them i
 
 ## Architecture and data handling
 
-Version 0.1.0 is skills-only:
+Published v0.1.0 and the unsubmitted v0.1.1 update candidate are skills-only:
 
 - no MCP server;
 - no bundled executable code or lifecycle hook;
@@ -129,15 +149,15 @@ python tools/validate_package.py
 
 Maintainers should also run the current bundled Codex validators for the plugin and skill, install the final package through the local marketplace, and execute the synthetic cases in [evals](evals/README.md) in both Korean and English.
 
-On August 20, 2026, a private ChatGPT Work release-candidate skill named `premilume-rc-test` passed fresh-conversation host-behavior smoke checks on the exact final instruction content. Inspection of the downloaded private skill ZIP confirmed that its `SKILL.md` instruction body contained the exact final source body and that all three reference texts exactly matched the final source references. Its private name, description, and inlined packaging differed from the final plugin, so this is not a claim of byte-identical complete-plugin validation. After directory availability, maintainers should run a post-publication fresh-conversation smoke on the published plugin. See [the local validation record](evals/LOCAL_RESULTS.md).
+On August 20, 2026, a private ChatGPT Work release-candidate skill named `premilume-rc-test` passed fresh-conversation host-behavior smoke checks on the exact final instruction content. Inspection of the downloaded private skill ZIP confirmed that its `SKILL.md` instruction body contained the exact final source body and that all three reference texts exactly matched the final source references. Its private name, description, and inlined packaging differed from the final plugin, so this is not a claim of byte-identical complete-plugin validation. A fresh-conversation smoke against the published v0.1.0 plugin has not been recorded. See [the local validation record](evals/LOCAL_RESULTS.md).
 
-## Known limitations and remaining OpenAI publication conditions
+## Known limitations and publication notes
 
 - ON/OFF state is instruction-based and conversation-scoped, not a durable state machine.
 - Model responses remain probabilistic; semantic eval cases require human review.
 - This workflow can support verification but cannot guarantee correctness, learning, safety, or better judgment.
 - It is not a medical, legal, financial, mental-health, or other licensed professional service.
-- The public policy and support URLs are live, and ChatGPT host behavior has been smoke-tested on exact final instruction content. Final legal clearance of the product name, OpenAI review and approval, and directory publication remain outstanding; after directory availability, a published-plugin post-publication smoke remains to be run.
+- v0.1.0 is published and globally available but `UNLISTED`; a post-publication smoke against that exact plugin has not been recorded. v0.1.1 remains an unsubmitted update candidate. Final legal clearance of the product name remains outside this technical work.
 
 ## Project origin and license
 

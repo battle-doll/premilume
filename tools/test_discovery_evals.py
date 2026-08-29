@@ -26,6 +26,11 @@ class DiscoveryEvalTests(unittest.TestCase):
         self.assertTrue(any("exactly 10 direct" in error for error in errors))
         self.assertTrue(any("wrong expected_selection" in error for error in errors))
 
+    def test_non_object_payload_is_rejected(self) -> None:
+        errors: list[str] = []
+        validate_discovery_evals([], errors)
+        self.assertIn("discovery eval payload must be an object", errors)
+
 
 if __name__ == "__main__":
     unittest.main()

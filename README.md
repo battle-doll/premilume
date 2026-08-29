@@ -4,13 +4,13 @@
 
 Choose direct answers or guided AI mentoring while keeping assumptions, trade-offs, and user control visible. Premilume is for developers, learners, and decision-makers who want a mentor mode on demand—not an always-on tutor.
 
-> Publication status, verified 2026-08-29: [v0.1.0 is Published](https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825) in OpenAI Platform and the remote catalog records `GLOBAL` / `AVAILABLE` with discoverability `UNLISTED`. The first publication date is unknown. v0.1.1 is an unsubmitted update candidate; no LISTED status is claimed.
+> Publication status, verified 2026-08-29: [v0.1.1 is Published](https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825) in OpenAI Platform. An exact-name search returns one result in the public section, and the current-version detail page opens successfully. The first publication date and the remote-catalog discoverability field were not independently established.
 
 ## Install or use
 
-- Open the exact [published v0.1.0 plugin page](https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825). Because it is `UNLISTED`, do not expect directory search or browse placement.
+- Open the exact [published v0.1.1 plugin page](https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825). Exact-name search currently returns one public result.
 - For local Codex development, use the [source installation steps](#local-installation) below.
-- This branch prepares v0.1.1 for a future update submission; it is not the published package.
+- This branch contains the source intended for published v0.1.1; a byte-for-byte comparison with the portal upload has not been recorded.
 
 ## Try it
 
@@ -111,7 +111,7 @@ It then limits exploration to one to three high-impact unknowns and turns them i
 
 ## Architecture and data handling
 
-Published v0.1.0 and the unsubmitted v0.1.1 update candidate are skills-only:
+Published v0.1.1 is skills-only:
 
 - no MCP server;
 - no bundled executable code or lifecycle hook;
@@ -157,7 +157,7 @@ On August 20, 2026, a private ChatGPT Work release-candidate skill named `premil
 - Model responses remain probabilistic; semantic eval cases require human review.
 - This workflow can support verification but cannot guarantee correctness, learning, safety, or better judgment.
 - It is not a medical, legal, financial, mental-health, or other licensed professional service.
-- v0.1.0 is published and globally available but `UNLISTED`; a post-publication smoke against that exact plugin has not been recorded. v0.1.1 remains an unsubmitted update candidate. Final legal clearance of the product name remains outside this technical work.
+- v0.1.1 is published and exact-name search returns one public result. A post-publication fresh-conversation smoke and actual selector success across all 50 discovery prompts have not been recorded. Final legal clearance of the product name remains outside this technical work.
 
 ## Project origin and license
 

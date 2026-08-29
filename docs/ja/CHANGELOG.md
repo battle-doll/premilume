@@ -6,7 +6,7 @@
 
 本プロジェクトの注目すべき変更はすべてここに記録されます。
 
-## [0.1.1] - 未リリース
+## [0.1.1] - 2026-08-29
 
 ### 変更
 
@@ -17,8 +17,8 @@
 
 ### 公開状況
 
-- 2026-08-29 確認: v0.1.0 は OpenAI Platform で Published、リモートカタログでは `GLOBAL` / `AVAILABLE`、discoverability `UNLISTED` です: <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>。
-- v0.1.1 は未提出の更新候補です。LISTED 状態、審査結果、公開、性能向上は主張しません。
+- 2026-08-29 確認: v0.1.1 は OpenAI Platform で Published です: <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>。完全一致の名前検索では公開セクションに 1 件だけ表示され、現行バージョンの詳細ページも正常に開きます。
+- 公開は selector 性能向上の証拠ではありません。公開後の新規会話スモークテストと、50 件すべての discovery プロンプトに対する実際の selector 成功率は未測定です。
 
 ## [0.1.0] - 2026-08-19
 

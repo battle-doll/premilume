@@ -1,10 +1,10 @@
 # Local validation results
 
-## Current publication and v0.1.1 candidate state
+## Current v0.1.1 publication state
 
-Verified on 2026-08-29: v0.1.0 is **Published** in OpenAI Platform. The remote catalog records `GLOBAL` / `AVAILABLE` with discoverability `UNLISTED` at <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>. The first publication date is unknown, and `UNLISTED` does not mean the plugin appears in directory search or browse surfaces.
+Verified on 2026-08-29: v0.1.1 is **Published** in OpenAI Platform at <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>. Exact-name search returns one result in the public section, and the current-version detail page opens successfully. The first publication date and the remote-catalog discoverability field were not independently established.
 
-Version 0.1.1 is an unsubmitted update candidate. On 2026-08-29, the repository package validator, the current bundled plugin validator, the current skill validator (Python UTF-8 mode), and 25 unit tests passed. The discovery dataset contract passed with exactly 10 direct, 20 indirect, and 20 negative Korean/English cases. The deterministic candidate archive was rebuilt independently with identical SHA-256 `2a23b7d41c92956df21b24659e54cbc05cfdeab56672cf3390c3e2bb962edb0f` (11,842 bytes). These are structural and deterministic-build results; all 50 discovery prompts still require host execution or human semantic review before an update submission.
+On 2026-08-29, the repository package validator, the current bundled plugin validator, the current skill validator (Python UTF-8 mode), and 25 unit tests passed for v0.1.1. The discovery dataset contract passed with exactly 10 direct, 20 indirect, and 20 negative Korean/English cases. The deterministic archive was rebuilt independently with identical SHA-256 `2a23b7d41c92956df21b24659e54cbc05cfdeab56672cf3390c3e2bb962edb0f` (11,842 bytes). These are structural and deterministic-build results; actual host selector success across all 50 discovery prompts remains unmeasured after publication.
 
 ## Historical v0.1.0 validation evidence
 
@@ -86,7 +86,7 @@ Inspection of the downloaded private skill ZIP confirmed that its `SKILL.md` ins
 
 ## Historical portal readiness evidence
 
-The following paragraph records observations made on 2026-08-19 before the later publication verified above. OpenAI Platform showed `Verified` for the current publisher organization, an enabled **Create plugin** control in the plugin portal, and existing published plugins whose displayed developer name was `battle-doll`. A private Premilume 0.1.0 skills-only draft existed; its bundle scan passed and Plugin Info, starter prompts, icons, and public URLs were populated. At that time, the remaining portal fields and attestations had not been independently confirmed. This historical draft state must not be used to contradict the current Published / `UNLISTED` catalog evidence.
+The following paragraph records observations made on 2026-08-19 before the later publication verified above. OpenAI Platform showed `Verified` for the current publisher organization, an enabled **Create plugin** control in the plugin portal, and existing published plugins whose displayed developer name was `battle-doll`. A private Premilume 0.1.0 skills-only draft existed; its bundle scan passed and Plugin Info, starter prompts, icons, and public URLs were populated. At that time, the remaining portal fields and attestations had not been independently confirmed. This historical draft state must not be used to contradict the current v0.1.1 Published status and exact-name public-search evidence.
 
 The GitHub repository and v0.1.0 release are public. Website, support, privacy, and terms URLs returned HTTP 200; GitHub private vulnerability reporting is enabled; and the published release ZIP matches the canonical SHA-256 recorded above.
 
@@ -98,10 +98,10 @@ The CLI emitted unrelated host warnings about several already-configured connect
 
 - ChatGPT web and desktop Chat surfaces outside the tested private Work host;
 - repeated behavior across models and context compaction;
-- a post-publication fresh-conversation smoke against the exact published v0.1.0 plugin;
+- a post-publication fresh-conversation smoke against the exact published v0.1.1 plugin;
 - host selection and semantic behavior across all 50 v0.1.1 discovery cases;
-- submission, review, approval, publication, or LISTED status for the v0.1.1 update candidate;
+- a byte-for-byte comparison between the portal upload and the deterministic v0.1.1 archive;
 - full trademark clearance beyond the documented preliminary knockout;
-- current portal fields and attestations for a future v0.1.1 submission.
+- the exact portal field selections, attestations, first publication date, and remote-catalog discoverability field for v0.1.1.
 
-The recorded v0.1.1 results are not evidence of submission, review, approval, publication, LISTED discoverability, improved model behavior, or universal reliability.
+The recorded v0.1.1 validation results are not evidence of improved selector behavior or universal reliability. Publication and exact-name public-search availability were verified separately from those local results.

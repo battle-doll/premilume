@@ -6,7 +6,7 @@
 
 本项目的所有重要变更都将记录在此。
 
-## [0.1.1] - 未发布
+## [0.1.1] - 2026-08-29
 
 ### 变更
 
@@ -17,8 +17,8 @@
 
 ### 发布状态
 
-- 2026-08-29 已验证：v0.1.0 在 OpenAI Platform 中为 Published；远程目录记录为 `GLOBAL` / `AVAILABLE`，discoverability 为 `UNLISTED`：<https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>。
-- v0.1.1 是尚未提交的更新候选版本。本文不声称其已 LISTED、通过审核、发布或提升性能。
+- 2026-08-29 已验证：v0.1.1 在 OpenAI Platform 中为 Published：<https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>。按完整名称搜索时，公开区只返回一个结果，当前版本详情页也能正常打开。
+- 发布并不能证明 selector 性能有所提升。发布后新会话冒烟测试以及全部 50 个 discovery 提示的实际 selector 成功率尚未测量。
 
 ## [0.1.0] - 2026-08-19
 

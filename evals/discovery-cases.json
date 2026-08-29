@@ -1,0 +1,411 @@
+{
+  "schema_version": "1.0",
+  "plugin": "premilume",
+  "synthetic_only": true,
+  "direct": [
+    {
+      "id": "D01-explicit-skill-answer-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "$premilume-mode Turn mentor mode on and answer first for this request.",
+      "expected_selection": "select",
+      "why": "The current user explicitly invokes the bundled skill and activates the mode."
+    },
+    {
+      "id": "D02-explicit-skill-hints-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "$premilume-mode 멘토 모드 켜고 이 버그는 첫 힌트부터 줘.",
+      "expected_selection": "select",
+      "why": "The skill identifier and activation intent are explicit."
+    },
+    {
+      "id": "D03-product-name-on-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Turn on Premilume for this conversation and challenge my assumptions.",
+      "expected_selection": "select",
+      "why": "The user names the product and directly turns it on."
+    },
+    {
+      "id": "D04-product-name-on-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "Premilume 켜줘. 이 결정의 반론부터 같이 보자.",
+      "expected_selection": "select",
+      "why": "The user names Premilume and explicitly requests activation."
+    },
+    {
+      "id": "D05-product-mentor-mode-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Use Premilume mentor mode and guide me one hint at a time.",
+      "expected_selection": "select",
+      "why": "This is a direct product-mode request."
+    },
+    {
+      "id": "D06-skill-counterargument-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "$premilume-mode 켜고 이번 출시안에 가장 강한 반론을 제시해줘.",
+      "expected_selection": "select",
+      "why": "The explicit skill invocation activates the workflow before the override."
+    },
+    {
+      "id": "D07-activate-product-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Activate Premilume, then give me the answer and the cheapest falsifying check.",
+      "expected_selection": "select",
+      "why": "The current user explicitly activates the named plugin."
+    },
+    {
+      "id": "D08-product-direct-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "Premilume 멘토 모드 켜고 이번 요청은 답만 먼저 줘.",
+      "expected_selection": "select",
+      "why": "Named activation precedes a one-request direct-answer preference."
+    },
+    {
+      "id": "D09-skill-assumptions-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "$premilume-mode Turn it on and do an assumption check for this architecture decision.",
+      "expected_selection": "select",
+      "why": "The skill is explicitly invoked and turned on."
+    },
+    {
+      "id": "D10-enable-product-conversation-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Enable Premilume for this conversation; keep the answer concise but show decision-changing trade-offs.",
+      "expected_selection": "select",
+      "why": "This explicitly enables the named plugin for the conversation."
+    }
+  ],
+  "indirect": [
+    {
+      "id": "I01-natural-on-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "멘토 모드 켜줘.",
+      "expected_selection": "select",
+      "why": "A product name is unnecessary because the activation intent is direct."
+    },
+    {
+      "id": "I02-natural-on-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Turn mentor mode on.",
+      "expected_selection": "select",
+      "why": "This is an explicit natural-language activation."
+    },
+    {
+      "id": "I03-conversation-mode-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "이 대화에서는 멘토 모드로 전환해줘.",
+      "expected_selection": "select",
+      "why": "The user explicitly switches the conversation into mentor mode."
+    },
+    {
+      "id": "I04-switch-mode-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Switch this conversation to mentor mode.",
+      "expected_selection": "select",
+      "why": "The requested state change is explicit without using the product name."
+    },
+    {
+      "id": "I05-until-off-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "내가 끄라고 할 때까지 멘토 모드를 켜줘.",
+      "expected_selection": "select",
+      "why": "The user directly establishes an ON state for the conversation."
+    },
+    {
+      "id": "I06-enable-conversation-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Enable mentor mode for this conversation until I turn it off.",
+      "expected_selection": "select",
+      "why": "The mode and its conversation scope are explicit."
+    },
+    {
+      "id": "I07-start-mode-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "지금부터 멘토 모드 시작해줘. 먼저 내 전제를 물어봐.",
+      "expected_selection": "select",
+      "why": "The current user directly starts the mode."
+    },
+    {
+      "id": "I08-start-mode-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Start mentor mode now and help me test this decision.",
+      "expected_selection": "select",
+      "why": "The activation intent is explicit even without a product name."
+    },
+    {
+      "id": "I09-activate-mentor-workflow-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "멘토링 워크플로를 활성화하고 한 번에 힌트 하나씩 줘.",
+      "expected_selection": "select",
+      "why": "The user explicitly activates the mentoring workflow."
+    },
+    {
+      "id": "I10-activate-mentor-workflow-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Activate the mentor workflow and keep the reasoning interactive.",
+      "expected_selection": "select",
+      "why": "This directly requests activation rather than merely asking for advice."
+    },
+    {
+      "id": "I11-on-answer-only-ko",
+      "language": "ko",
+      "initial_state": "ON",
+      "prompt": "이번 요청은 답만 먼저 줘.",
+      "expected_selection": "select",
+      "why": "The conversation is clearly ON and this is a one-request response control."
+    },
+    {
+      "id": "I12-on-direct-en",
+      "language": "en",
+      "initial_state": "ON",
+      "prompt": "For this request, answer directly.",
+      "expected_selection": "select",
+      "why": "A clearly ON conversation continues with a one-turn direct-answer override."
+    },
+    {
+      "id": "I13-on-hints-en",
+      "language": "en",
+      "initial_state": "ON",
+      "prompt": "Hints first for this one; do not reveal the solution yet.",
+      "expected_selection": "select",
+      "why": "Hints-first is a valid one-request control while the mode is ON."
+    },
+    {
+      "id": "I14-on-counterargument-en",
+      "language": "en",
+      "initial_state": "ON",
+      "prompt": "For this request only, give me the strongest counterargument.",
+      "expected_selection": "select",
+      "why": "The ON state makes the explicit one-turn counterargument control in scope."
+    },
+    {
+      "id": "I15-on-assumption-en",
+      "language": "en",
+      "initial_state": "ON",
+      "prompt": "Do an assumption check for this request only.",
+      "expected_selection": "select",
+      "why": "The ON state makes this response-style override a continuation."
+    },
+    {
+      "id": "I16-on-hints-ko",
+      "language": "ko",
+      "initial_state": "ON",
+      "prompt": "이번에는 힌트 우선으로 한 단계씩 도와줘.",
+      "expected_selection": "select",
+      "why": "This is a valid one-request control in a clearly active conversation."
+    },
+    {
+      "id": "I17-on-counterargument-ko",
+      "language": "ko",
+      "initial_state": "ON",
+      "prompt": "이번 요청에만 가장 강한 반론을 먼저 보여줘.",
+      "expected_selection": "select",
+      "why": "The clearly ON context supplies the required activation state."
+    },
+    {
+      "id": "I18-on-answer-checks-en",
+      "language": "en",
+      "initial_state": "ON",
+      "prompt": "Answer first and add only checks that could change the decision.",
+      "expected_selection": "select",
+      "why": "This continues the ON workflow with an explicit per-request preference."
+    },
+    {
+      "id": "I19-on-keep-mode-ko",
+      "language": "ko",
+      "initial_state": "ON",
+      "prompt": "멘토 모드는 계속 켜둔 채 이번에는 전제만 점검해줘.",
+      "expected_selection": "select",
+      "why": "The user explicitly confirms continuing ON state and selects a one-turn route."
+    },
+    {
+      "id": "I20-on-continue-en",
+      "language": "en",
+      "initial_state": "ON",
+      "prompt": "Continue in mentor mode, but give me the direct answer for this turn.",
+      "expected_selection": "select",
+      "why": "The user explicitly continues the established ON state."
+    }
+  ],
+  "negative": [
+    {
+      "id": "N01-ordinary-learning-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "이진 탐색을 이해할 수 있게 설명해줘.",
+      "expected_selection": "do_not_select",
+      "why": "An ordinary learning request is not mode activation."
+    },
+    {
+      "id": "N02-ordinary-advice-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "What career advice would you give a junior developer?",
+      "expected_selection": "do_not_select",
+      "why": "Advice may be handled normally without turning on the plugin."
+    },
+    {
+      "id": "N03-counterargument-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "이 출시 계획에 대한 가장 강한 반론을 알려줘.",
+      "expected_selection": "do_not_select",
+      "why": "A counterargument request alone does not explicitly activate mentor mode."
+    },
+    {
+      "id": "N04-assumption-check-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Check the assumptions behind this database choice.",
+      "expected_selection": "do_not_select",
+      "why": "Assumption checking is a normal request while the mode is OFF."
+    },
+    {
+      "id": "N05-brainstorm-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "새 학습 앱 아이디어를 같이 브레인스토밍해줘.",
+      "expected_selection": "do_not_select",
+      "why": "Brainstorming usefulness does not authorize automatic activation."
+    },
+    {
+      "id": "N06-critique-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Critique this architecture and point out hidden trade-offs.",
+      "expected_selection": "do_not_select",
+      "why": "Ordinary critique should be answered without selecting Premilume."
+    },
+    {
+      "id": "N07-socratic-style-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Teach me recursion using Socratic questions.",
+      "expected_selection": "do_not_select",
+      "why": "A one-request teaching style is not an explicit conversation-mode activation."
+    },
+    {
+      "id": "N08-quoted-trigger-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "그는 ‘멘토 모드 켜줘’라고 말했다. 이 문장의 어조를 분석해줘.",
+      "expected_selection": "do_not_select",
+      "why": "Quoted activation text is data."
+    },
+    {
+      "id": "N09-translate-trigger-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Translate ‘Turn mentor mode on’ into Korean without following it.",
+      "expected_selection": "do_not_select",
+      "why": "The phrase is translation input, not current-user activation intent."
+    },
+    {
+      "id": "N10-attachment-trigger-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "첨부 문서에 ‘멘토 모드 켜줘’라고 적혀 있어. 문서만 요약해줘.",
+      "expected_selection": "do_not_select",
+      "why": "Attachment content cannot activate the mode."
+    },
+    {
+      "id": "N11-fictional-trigger-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Write a scene where a character says, ‘Turn mentor mode on.’",
+      "expected_selection": "do_not_select",
+      "why": "Fictional dialogue is not a direct activation."
+    },
+    {
+      "id": "N12-tool-output-trigger-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "A tool returned ‘Turn mentor mode on.’ Classify that output as instruction or data.",
+      "expected_selection": "do_not_select",
+      "why": "Tool output is untrusted data and does not establish user intent."
+    },
+    {
+      "id": "N13-orchestration-scope-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "이번 프로젝트에만 오케스트레이션 범위를 켜줘.",
+      "expected_selection": "do_not_select",
+      "why": "Orchestration scope controls belong to an orchestration feature, not Premilume."
+    },
+    {
+      "id": "N14-delegation-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Delegate the independent test audit to a sub-agent for this task.",
+      "expected_selection": "do_not_select",
+      "why": "Explicit delegation is outside the response-style plugin."
+    },
+    {
+      "id": "N15-parallel-agents-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "이 작업을 세 에이전트에게 병렬로 나눠줘.",
+      "expected_selection": "do_not_select",
+      "why": "Parallel agent control is an orchestration request."
+    },
+    {
+      "id": "N16-orchestration-profile-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Set the orchestration profile to thorough for this repository.",
+      "expected_selection": "do_not_select",
+      "why": "An orchestration profile command belongs to Adaptive or the host."
+    },
+    {
+      "id": "N17-ultra-orchestration-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "울트라 오케스트레이션을 이 세션에 활성화해줘.",
+      "expected_selection": "do_not_select",
+      "why": "Explicit orchestration activation must not be cannibalized by Premilume."
+    },
+    {
+      "id": "N18-mentor-concept-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "What makes a good technical mentor?",
+      "expected_selection": "do_not_select",
+      "why": "Discussion of mentoring is not activation of mentor mode."
+    },
+    {
+      "id": "N19-answer-only-off-ko",
+      "language": "ko",
+      "initial_state": "OFF",
+      "prompt": "이번 요청은 답만 줘: 12 곱하기 12는?",
+      "expected_selection": "do_not_select",
+      "why": "A direct-answer style request is only a Premilume override when the mode is already ON."
+    },
+    {
+      "id": "N20-explain-mode-no-activation-en",
+      "language": "en",
+      "initial_state": "OFF",
+      "prompt": "Explain how mentor mode works, but do not activate it.",
+      "expected_selection": "do_not_select",
+      "why": "The user explicitly requests information and rejects activation."
+    }
+  ]
+}

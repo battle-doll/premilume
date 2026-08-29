@@ -6,7 +6,7 @@
 
 이 프로젝트의 주목할 만한 모든 변경사항은 여기에 기록됩니다.
 
-## [0.1.1] - 미출시
+## [0.1.1] - 2026-08-29
 
 ### 변경
 
@@ -17,8 +17,8 @@
 
 ### 게시 상태
 
-- 2026-08-29 확인: v0.1.0은 OpenAI Platform에 Published 상태이며 원격 카탈로그는 `GLOBAL` / `AVAILABLE`, discoverability `UNLISTED`로 기록합니다: <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>.
-- v0.1.1은 아직 제출하지 않은 업데이트 후보입니다. LISTED 상태, 심사 결과, 게시 또는 성능 향상을 주장하지 않습니다.
+- 2026-08-29 확인: v0.1.1은 OpenAI Platform에 Published 상태입니다: <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>. 정확한 이름 검색은 공개 섹션에 단일 결과를 반환하며 현재 버전 상세 페이지도 정상적으로 열립니다.
+- 게시는 selector 성능 향상의 증거가 아닙니다. 게시 후 새 대화 스모크 테스트와 50개 discovery 프롬프트 전체의 실제 selector 성공률은 아직 측정하지 않았습니다.
 
 ## [0.1.0] - 2026-08-19
 

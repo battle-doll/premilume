@@ -10,7 +10,7 @@ This policy covers the Premilume open-source skills-only plugin package publishe
 
 ## Data handled by the plugin publisher
 
-Published version 0.1.0 and the unsubmitted version 0.1.1 update candidate have no publisher-operated server, MCP service, user account, database, analytics, advertising, or telemetry. The package contains instructions and static assets only.
+Published version 0.1.1 has no publisher-operated server, MCP service, user account, database, analytics, advertising, or telemetry. The package contains instructions and static assets only.
 
 The publisher does not receive, collect, transmit, or retain user prompts or conversation content through the plugin package. Publisher retention for that runtime content is therefore zero.
 

@@ -23,5 +23,5 @@ jobs:
         run: python -m unittest discover -s tools -p "test_*.py"
       - name: Build and validate release archive
         run: |
-          python tools/build_release_zip.py --output dist/premilume-0.1.0-ci.zip
-          python tools/validate_package.py --archive dist/premilume-0.1.0-ci.zip
+          python tools/build_release_zip.py --output dist/premilume-0.1.1-ci.zip
+          python tools/validate_package.py --archive dist/premilume-0.1.1-ci.zip

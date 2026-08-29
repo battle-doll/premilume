@@ -1,6 +1,17 @@
 # Public release checklist
 
-Items marked **blocking** must be completed by the accountable publisher before OpenAI review submission or directory publication. Completed items also record prerequisites already satisfied for the GitHub source release.
+This file records both completed release controls and residual post-publication evidence gaps. Historical portal actions are not reconstructed when field-level evidence was not retained.
+
+## v0.1.1 published update
+
+- [x] Preserve the historical v0.1.0 archive and SHA-256 below without rebuilding or replacement.
+- [x] Bump manifest, build defaults, CI archive path, validation label, submission metadata, changelog, and policy version references to v0.1.1.
+- [x] Record the independently verified 2026-08-29 state of v0.1.1 as OpenAI Platform Published; exact-name search returns one result in the public section and the current-version detail page opens successfully.
+- [x] Build and validate the exact deterministic `dist/premilume-0.1.1.zip`; independent rebuild matched SHA-256 `2a23b7d41c92956df21b24659e54cbc05cfdeab56672cf3390c3e2bb962edb0f` (11,842 bytes).
+- [x] Run repository, plugin, skill, archive, and unit-test validation, including the static contract for 10 direct, 20 indirect, and 20 negative discovery cases.
+- [x] The accountable publisher confirmed that v0.1.1 completed submission, review, and the separate Publish action.
+- [ ] **Post-publication measurement:** execute all 50 discovery prompts on the intended host and record actual selector behavior.
+- [ ] **Artifact evidence:** compare the portal-uploaded bytes with the deterministic archive if the platform exposes a trustworthy download or digest.
 
 ## Identity and name
 
@@ -37,23 +48,19 @@ Items marked **blocking** must be completed by the accountable publisher before 
 - [x] Confirm privacy statements match the final package's actual data flow.
 - [x] Confirm source attribution, license scope, modification notice, non-endorsement, and third-party exclusions.
 - [x] Confirm all five README variants and the five-language privacy, terms, support, security, attribution, contribution, and changelog documents remain materially aligned.
-- [ ] **Blocking:** commit and publish this post-release status synchronization for all five README status notices, all five SECURITY release statuses, all five CHANGELOG entries, `docs/SUBMISSION_DRAFT.md`, and `evals/LOCAL_RESULTS.md`; then verify the public `main` branch exposes the corrected text.
+- [x] Prepare the post-release status synchronization for all five README status notices, all five SECURITY release statuses, all five CHANGELOG entries, `docs/SUBMISSION_DRAFT.md`, and `evals/LOCAL_RESULTS.md` in GitHub PR #1; the merged PR is the public-main evidence.
 - [ ] Review Korean and target-market AI transparency, consumer, privacy, and high-impact decision requirements for the actual launch countries.
 - [x] Confirm the current listing does not market the plugin as a professional, conscious entity, guaranteed learning system, or automated high-impact decision maker.
 
-## OpenAI submission
+## OpenAI publication record
 
 - [x] Publisher identity verified in OpenAI Platform (read-only check on 2026-08-19).
 - [x] Apps Management write access confirmed by the enabled **Create plugin** control and existing published versions in the same organization (read-only check on 2026-08-19).
-- [x] Create the private Premilume 0.1.0 draft using the skills-only submission type.
-- [x] Upload a skills-only bundle and obtain a **Passed** scan for `premilume-mode`.
-- [x] Populate Plugin Info, three starter prompts, production icons, and public URLs.
-- [ ] Confirm that the private draft has the intended verified `battle-doll` Developer Identity selected.
-- [ ] Enter and verify the five positive and three negative cases from `evals/submission-cases.json` in the portal. Their final Codex execution has already passed.
-- [ ] Select only countries where product, support, policies, and legal review are ready.
-- [ ] Read and personally confirm all four policy attestations. They are currently unchecked, and **Confirm and submit** is disabled.
-- [ ] Submit for review; do not claim publication while review is pending.
-- [ ] Publish from the portal only after approval and a final go/no-go review.
+- [x] Historical v0.1.0 private draft and skills-only bundle scan were recorded before its earlier publication.
+- [x] The accountable publisher confirmed that v0.1.1 completed submission, approval, and the separate Publish action on 2026-08-29.
+- [x] Exact-name search returns one Premilume result in the public section, and the current-version detail page opens successfully.
+- [ ] The exact v0.1.1 Developer Identity selection, entered evaluation cases, country selection, and attestation text were not independently re-read after publication and are not reconstructed here.
+- [ ] The portal upload has not been compared byte-for-byte with `dist/premilume-0.1.1.zip`.
 
 ## External actions not implied by this repository
 

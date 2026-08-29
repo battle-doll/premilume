@@ -1,10 +1,10 @@
 interface:
   display_name: "Premilume Mode"
-  short_description: "Balances direct answers with guided exploration"
+  short_description: "Explicit opt-in mentor mode"
   icon_small: "./assets/icon.svg"
   icon_large: "./assets/logo.svg"
   brand_color: "#4F6D7A"
-  default_prompt: "Use $premilume-mode to turn mentor mode on for this conversation."
+  default_prompt: "Use $premilume-mode to turn mentor mode on and answer first while surfacing only decision-changing assumptions."
 
 policy:
   allow_implicit_invocation: true

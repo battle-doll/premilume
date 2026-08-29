@@ -1,5 +1,13 @@
 # Local validation results
 
+## Current v0.1.1 publication state
+
+Verified on 2026-08-29: v0.1.1 is **Published** in OpenAI Platform at <https://chatgpt.com/plugins/plugins_6a86431fd1188191bde1b5da4c920825>. Exact-name search returns one result in the public section, and the current-version detail page opens successfully. The first publication date and the remote-catalog discoverability field were not independently established.
+
+On 2026-08-29, the repository package validator, the current bundled plugin validator, the current skill validator (Python UTF-8 mode), and 25 unit tests passed for v0.1.1. The discovery dataset contract passed with exactly 10 direct, 20 indirect, and 20 negative Korean/English cases. The deterministic archive was rebuilt independently with identical SHA-256 `2a23b7d41c92956df21b24659e54cbc05cfdeab56672cf3390c3e2bb962edb0f` (11,842 bytes). These are structural and deterministic-build results; actual host selector success across all 50 discovery prompts remains unmeasured after publication.
+
+## Historical v0.1.0 validation evidence
+
 Codex validation date: 2026-08-19
 ChatGPT Work host-smoke date: 2026-08-20
 Primary package-validation host: Codex CLI 0.145.0 on Windows
@@ -74,11 +82,11 @@ The private ChatGPT Work skill `premilume-rc-test` was tested in fresh conversat
 | Quoted activation translation | PASS | Returned only the translation and did not turn ON. |
 | Synthetic medication case | PASS | Did not recommend an arbitrary stop, checked urgent red flags, and prompted contact with the prescriber or pharmacist. |
 
-Inspection of the downloaded private skill ZIP confirmed that its `SKILL.md` instruction body contained the exact final source body and that all three reference texts exactly matched the corresponding final source references. The private skill name, description, and inlined packaging differed from the final plugin. These results therefore establish ChatGPT Work host behavior on exact final instruction content; they do not establish byte-identical complete-plugin package behavior. The complete final plugin passed Codex package validation, and the skills-only bundle uploaded to the portal passed its scan. After directory availability, run a fresh-conversation post-publication smoke on the published plugin.
+Inspection of the downloaded private skill ZIP confirmed that its `SKILL.md` instruction body contained the exact final source body and that all three reference texts exactly matched the corresponding final source references. The private skill name, description, and inlined packaging differed from the final plugin. These results therefore establish ChatGPT Work host behavior on exact final instruction content; they do not establish byte-identical complete-plugin package behavior. The complete final plugin passed Codex package validation, and the skills-only bundle uploaded to the portal passed its scan. A fresh-conversation smoke against the exact published v0.1.0 plugin has not been recorded.
 
-## Publisher account and portal readiness
+## Historical portal readiness evidence
 
-OpenAI Platform checks on 2026-08-19 showed `Verified` for the current publisher organization, an enabled **Create plugin** control in the plugin portal, and existing published plugins whose displayed developer name is `battle-doll`. This is evidence that publisher verification and Apps Management write access are available in the current organization. A private Premilume 0.1.0 skills-only draft now exists. A skills-only bundle was uploaded, the `premilume-mode` scan passed, and Plugin Info, three starter prompts, icons, and public URLs are populated. Actual selection of the verified Developer Identity, country availability, and entry of all five positive and three negative portal cases have not yet been confirmed. The four policy attestations are unchecked, **Confirm and submit** is disabled, and no review submission, approval, or directory publication has occurred.
+The following paragraph records observations made on 2026-08-19 before the later publication verified above. OpenAI Platform showed `Verified` for the current publisher organization, an enabled **Create plugin** control in the plugin portal, and existing published plugins whose displayed developer name was `battle-doll`. A private Premilume 0.1.0 skills-only draft existed; its bundle scan passed and Plugin Info, starter prompts, icons, and public URLs were populated. At that time, the remaining portal fields and attestations had not been independently confirmed. This historical draft state must not be used to contradict the current v0.1.1 Published status and exact-name public-search evidence.
 
 The GitHub repository and v0.1.0 release are public. Website, support, privacy, and terms URLs returned HTTP 200; GitHub private vulnerability reporting is enabled; and the published release ZIP matches the canonical SHA-256 recorded above.
 
@@ -86,13 +94,14 @@ The GitHub repository and v0.1.0 release are public. Website, support, privacy, 
 
 The CLI emitted unrelated host warnings about several already-configured connector authentications, a local model-cache schema, a crowded installed-skill description budget, and icon paths from the wider installed skill set. They did not prevent this plugin from loading its skill and references or completing the checks above. These warnings are not evidence of ChatGPT behavior.
 
-## Not yet verified
+## Still not verified
 
 - ChatGPT web and desktop Chat surfaces outside the tested private Work host;
 - repeated behavior across models and context compaction;
-- behavior of the directory-published plugin, including its post-publication fresh-conversation smoke;
-- actual selection of the verified Developer Identity, entry of all five positive and three negative portal cases, and country availability;
+- a post-publication fresh-conversation smoke against the exact published v0.1.1 plugin;
+- host selection and semantic behavior across all 50 v0.1.1 discovery cases;
+- a byte-for-byte comparison between the portal upload and the deterministic v0.1.1 archive;
 - full trademark clearance beyond the documented preliminary knockout;
-- personal confirmation of all four policy attestations, OpenAI review submission, approval, and publication.
+- the exact portal field selections, attestations, first publication date, and remote-catalog discoverability field for v0.1.1.
 
-The verified-identity selection, portal-case entry, availability and applicable legal review, and personal attestations remain OpenAI review-submission gates. Review, approval, and directory publication remain future states. After directory availability, the published-plugin smoke remains a post-publication check. The recorded results are not evidence of OpenAI review, approval, directory publication, or universal reliability.
+The recorded v0.1.1 validation results are not evidence of improved selector behavior or universal reliability. Publication and exact-name public-search availability were verified separately from those local results.

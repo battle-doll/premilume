@@ -49,6 +49,7 @@ REQUIRED_FILES = [
     REPO_ROOT / "NOTICE.md",
     REPO_ROOT / "evals" / "submission-cases.json",
     REPO_ROOT / "evals" / "regression-cases.json",
+    REPO_ROOT / "evals" / "discovery-cases.json",
     PLUGIN_ROOT / ".codex-plugin" / "plugin.json",
     SKILL_ROOT / "SKILL.md",
     SKILL_ROOT / "agents" / "openai.yaml",
@@ -518,8 +519,56 @@ def validate_evals(errors: list[str]) -> None:
         if not isinstance(cases, list) or len(cases) < 20:
             errors.append("regression suite must contain at least twenty cases")
 
+    discovery = load_json(REPO_ROOT / "evals" / "discovery-cases.json", errors)
+    validate_discovery_evals(discovery, errors)
+
     if (REPO_ROOT / "evals" / "transcripts").exists():
         errors.append("real transcript directory must not exist in the public tree")
+
+
+def validate_discovery_evals(payload: object, errors: list[str]) -> None:
+    if not isinstance(payload, dict):
+        errors.append("discovery eval payload must be an object")
+        return
+    if payload.get("plugin") != "premilume" or payload.get("synthetic_only") is not True:
+        errors.append("discovery eval metadata must identify premilume and synthetic-only data")
+
+    expected_counts = {"direct": 10, "indirect": 20, "negative": 20}
+    identifiers: list[str] = []
+    for group, expected_count in expected_counts.items():
+        cases = payload.get(group)
+        if not isinstance(cases, list) or len(cases) != expected_count:
+            errors.append(f"discovery evals must contain exactly {expected_count} {group} cases")
+            continue
+        languages: set[str] = set()
+        expected_selection = "do_not_select" if group == "negative" else "select"
+        for case in cases:
+            if not isinstance(case, dict):
+                errors.append(f"discovery {group} cases must be objects")
+                continue
+            identifier = case.get("id")
+            if not isinstance(identifier, str) or not identifier.strip():
+                errors.append(f"discovery {group} case is missing a non-empty id")
+            else:
+                identifiers.append(identifier)
+            language = case.get("language")
+            if language not in {"ko", "en"}:
+                errors.append(f"discovery case {identifier!r} must use ko or en")
+            else:
+                languages.add(language)
+            if case.get("initial_state") not in {"OFF", "ON"}:
+                errors.append(f"discovery case {identifier!r} must declare OFF or ON initial_state")
+            if not isinstance(case.get("prompt"), str) or not case["prompt"].strip():
+                errors.append(f"discovery case {identifier!r} must contain a non-empty prompt")
+            if case.get("expected_selection") != expected_selection:
+                errors.append(f"discovery case {identifier!r} has the wrong expected_selection for {group}")
+            if not isinstance(case.get("why"), str) or not case["why"].strip():
+                errors.append(f"discovery case {identifier!r} must explain its boundary")
+        if languages != {"ko", "en"}:
+            errors.append(f"discovery {group} cases must include both ko and en")
+
+    if len(identifiers) != len(set(identifiers)):
+        errors.append("discovery eval IDs must be unique")
 
 
 def validate_gitignore(errors: list[str]) -> None:
@@ -729,7 +778,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Package validation passed: premilume 0.1.0")
+    print("Package validation passed: premilume 0.1.1")
     return 0
 
 

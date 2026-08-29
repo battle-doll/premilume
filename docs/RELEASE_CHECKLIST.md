@@ -2,6 +2,15 @@
 
 Items marked **blocking** must be completed by the accountable publisher before OpenAI review submission or directory publication. Completed items also record prerequisites already satisfied for the GitHub source release.
 
+## v0.1.1 update candidate
+
+- [x] Preserve the historical v0.1.0 archive and SHA-256 below without rebuilding or replacement.
+- [x] Bump manifest, build defaults, CI archive path, validation label, submission metadata, changelog, and policy version references to v0.1.1 where they describe the candidate.
+- [x] Record the independently verified 2026-08-29 state of v0.1.0 as OpenAI Platform Published and remote-catalog `GLOBAL` / `AVAILABLE` / `UNLISTED`, with its exact plugin URL.
+- [ ] Build and validate the exact deterministic `dist/premilume-0.1.1.zip` candidate.
+- [ ] Run static validators, unit tests, and human semantic review of the 10 direct, 20 indirect, and 20 negative discovery cases.
+- [ ] Submit v0.1.1 only after the accountable publisher completes current portal checks and attestations. It is not submitted or published merely because v0.1.0 is published.
+
 ## Identity and name
 
 - [x] Replaced the provisional name with `Premilume` after a documented preliminary knockout across relevant web use, GitHub, package registries, USPTO, and TMview. KIPRIS/WIPO phonetic and similar-mark review remains recommended before trademark registration or material commercial investment.

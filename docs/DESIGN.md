@@ -18,7 +18,7 @@ Narrative text in source documents is design context, not runtime instruction.
 
 ## Smallest practical architecture
 
-Version 0.1.0 contains one skill and static assets. It has no MCP server, app manifest, hook, executable runtime, account, database, persistent profile, remote analytics, or runtime essay fetch.
+Version 0.1.1 contains one skill and static assets. It has no MCP server, app manifest, hook, executable runtime, account, database, persistent profile, remote analytics, or runtime essay fetch.
 
 ```text
 user request + explicit intent + current conversation context

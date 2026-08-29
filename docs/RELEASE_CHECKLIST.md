@@ -7,8 +7,9 @@ Items marked **blocking** must be completed by the accountable publisher before 
 - [x] Preserve the historical v0.1.0 archive and SHA-256 below without rebuilding or replacement.
 - [x] Bump manifest, build defaults, CI archive path, validation label, submission metadata, changelog, and policy version references to v0.1.1 where they describe the candidate.
 - [x] Record the independently verified 2026-08-29 state of v0.1.0 as OpenAI Platform Published and remote-catalog `GLOBAL` / `AVAILABLE` / `UNLISTED`, with its exact plugin URL.
-- [ ] Build and validate the exact deterministic `dist/premilume-0.1.1.zip` candidate.
-- [ ] Run static validators, unit tests, and human semantic review of the 10 direct, 20 indirect, and 20 negative discovery cases.
+- [x] Build and validate the exact deterministic `dist/premilume-0.1.1.zip` candidate; independent rebuild matched SHA-256 `2a23b7d41c92956df21b24659e54cbc05cfdeab56672cf3390c3e2bb962edb0f` (11,842 bytes).
+- [x] Run repository, plugin, skill, archive, and unit-test validation, including the static contract for 10 direct, 20 indirect, and 20 negative discovery cases.
+- [ ] Execute or human-review all 50 discovery prompts for semantic selection behavior on the intended host.
 - [ ] Submit v0.1.1 only after the accountable publisher completes current portal checks and attestations. It is not submitted or published merely because v0.1.0 is published.
 
 ## Identity and name
